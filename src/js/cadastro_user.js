@@ -96,13 +96,13 @@ class CadastrarUser {
             console.log("Admin Cadastrado");
         }
         else{
-            const user = {
+            const userT = {
                 nome: user.nome,
                 email: user.email,
                 tipo: userTipoFormatado,
                 valorAluguel: valorAluguel
             }
-            await this.db.collection('usuarios').add(user);
+            await this.db.collection('usuarios').add(userT);
             console.log("User Cadastrado");
         }
    }
