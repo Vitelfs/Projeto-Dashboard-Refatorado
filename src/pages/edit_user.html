@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BluePen</title>
+    
+</head>
+<body>
+    <div class="form-container">
+        <h2>Edição de usuário</h2>
+        <form id="client_form" action="#">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label for="cpf_cnpj">Email:</label>
+                <input type="email" id="email" name="email" required autocomplete="off">
+            </div>
+            <div class="form-group">
+                <select name="valorUsuario" id="valorUsuario">
+                    <option value="1">Plano Básico - R$50,00</option>
+                    <option value="2">Plano Intermediario - R$100,00</option>
+                    <option value="3">Plano Avançado - R$150,00</option>
+                </select>
+            </div>
+            <button type="submit" id="add_cliente_btn">Atualizar usuário</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BluePen</title>
+    <link rel="shortcut icon" href="../css/favicon/dashboard.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/main/cad_user.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+</head>
+<body>
+    <div id="sidebar">
+        <div id="logo">
+            <img src="" alt="">
+        </div>
+
+        <ul class="menu">
+            <li>
+                <a href="mainadmin.html">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="vizu_user.html">
+                    <i class="fas fa-users"></i>
+                    <span>Visualizar Usuários</span>
+                </a>
+            </li>    
+            <li id="active">
+                <a href="cad_user.html">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Cadastro de Usuários</span>
+                </a>
+            </li>                
+            <li id="logout">
+                <a href="#" id="btnLogout">
+                    <i class="fas fa-sign-out"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+        </ul>
+
+        <div id="menuBarra" onclick="mobileMenuShow(this)">
+            <div class="barra1"></div>
+            <div class="barra2"></div>
+            <div class="barra3"></div>
+        </div>
+
+        <ul class="mobileMenu" onclick="mobileMenuShow(this)">
+            <li>
+                <a href="mainadmin.html">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="vizu_user.html">
+                    <i class="fas fa-users"></i>
+                    <span>Visualizar Usuários</span>
+                </a>
+            </li>    
+            <li>
+                <a href="#">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Cadastro de Usuários</span>
+                </a>
+            </li>   
+            <li id="logout">
+                <a href="#" id="btnLogout">
+                    <i class="fas fa-sign-out"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="conteudo">
+        <div class="header">
+            <div id="header_titulo">
+                <span id="username"></span>
+                <h2>Dashboard</h2>
+            </div>
+            <div class="user">
+                <div class="caixaPesquisa">
+                    <i class="fa fa-search"></i>
+                    <input type="text" placeholder="Pesquisar">
+                </div>
+                <img src="../css/main/img/user.png" alt="user">
+            </div>
+        </div>
+        <div class="container">
+            <h2>Cadastro de Usuário</h2>
+            <div id="cadastroForm">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" required>
+                    <small class="password-info"></small>
+                </div>
+                <div class="form-group">
+                    <label for="confirmSenha">Confirmar Senha:</label>
+                    <input type="password" id="confirmSenha" name="confirmSenha" required>
+                </div>
+                <div class="form-group">
+                    <button id="btnCadastrar">Cadastrar</button>
+                </div>
+                <div class="form-group">
+                    <label for="tipoUsuario">Tipo de Usuário:</label>
+                    <select id="tipoUsuario" name="tipoUsuario" required">
+                        <option value="" selected disabled>Selecione o tipo de usuário</option>
+                        <option value="administrador">Administrador</option>
+                        <option value="cliente">Usuário</option>
+                    </select>
+                    <select name="valorUsuario" id="valorUsuario">
+                        <option value="" selected disabled>Selecione o plano do usuario</option>
+                        <option value="1">Plano Básico - R$50,00</option>
+                        <option value="2">Plano Intermediario - R$100,00</option>
+                        <option value="3">Plano Avançado - R$150,00</option>
+                    </select>
+                </div>
+            </div>
+            <div id="mensagem"></div>
+        </div>
+    </div>
+    <script type="module" src="../js/cadastro_user.js"></script>
+    <script type="module" src="../js/logout.js"></script>
+    <script src="../js/mobile.js"></script>
+</body>
+</html>

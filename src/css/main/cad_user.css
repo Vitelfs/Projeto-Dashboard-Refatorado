@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+*{
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body{
+    display: flex;
+}
+
+#sidebar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 107px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: white;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background-color: rgb(0, 60, 130);
+    z-index: 2;
+}
+
+#sidebar:hover{
+    width: 330px;
+    transition: 0.5s;
+}
+
+#logo{
+    height: 80px;
+    padding: 15px;
+}
+
+.menu{
+    height: 90%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+
+.menu li{
+    padding: 1rem;
+    margin: 10px 0;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu li:hover, #active{
+    background: rgb(0, 100, 220);
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    text-align: start;
+}
+
+.menu a span{
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.menu a i{
+    font-size: 1.2rem;
+}
+
+.mobileMenu{
+    display: none;
+    top: 25px;
+    height: auto;
+    width: 100%;
+    list-style: none;
+}
+
+.mobileMenu:hover{
+    width: 280px;
+}
+
+.mobileMenu li{
+    padding: 1rem;
+    margin: 10px 1.5rem;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.mobileMenu a{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: start;
+}
+
+.mobileMenu a span{
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.mobileMenu a i{
+    font-size: 1.2rem;
+}
+
+.mobileMenu li:hover, #active{
+    background: rgb(0, 100, 220);
+}
+
+#menuBarra div{
+    display: none;
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.5s;
+}
+
+.barra1, .barra2, .barra3{
+    position: relative;
+    right: 17.8px;
+}
+
+.open .barra1{
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .barra2{
+    opacity: 0;
+}
+
+.open .barra3{
+    -webkit-transform: rotate(-45deg) translate(-6px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);
+}
+
+#logout{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+}
+
+
+#conteudo{
+    position: fixed;
+    background-color: rgb(11, 104, 211);
+    width: 100%;
+    padding: 1rem;
+    z-index: 1;
+}
+
+.header img{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: white;
+    border-radius: 15px;
+    padding: 10px 1rem;
+    margin-left: 107px;
+}
+
+#header_titulo{
+    color: rgb(0, 75, 160);
+}
+
+.user{
+    display: flex;
+    align-items: center;
+    gap: 1;
+}
+
+.caixaPesquisa{
+    background: rgb(235, 235, 235);
+    border-radius: 15px;
+    color: rgb(0, 75, 160);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    margin-right: 15px;
+}
+
+.caixaPesquisa input{
+    background: transparent;
+    padding: 10px;
+}
+
+.caixaPesquisa i{
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+
+.caixaPesquisa i:hover{
+    transform: scale(1.15);
+}
+
+.container {
+    position: relative;
+    background: white;
+    border-radius: 15px;
+    margin-top: 20px;
+    right: -107px;
+    padding: 10px 1rem;
+}
+
+.container h2 {
+    color: rgb(0, 75, 160);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: rgb(0, 75, 160);
+}
+
+.container
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: rgb(0, 75, 160);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(0, 60, 130);
+}
+
+#mensagem {
+    margin-top: 20px;
+    text-align: center;
+    color: rgb(0, 75, 160);
+}
+
+#valorUsuario{
+    display: none;
+}
+
+@media (max-width: 880px) {
+    #sidebar{
+        top: 0;
+        bottom: 0;
+        overflow-y: scroll;
+        width: 10px;
+        padding: 0 1.7rem;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .mobileMenu{
+        display: block;
+    }
+
+    #menuBarra div{
+        display: block;
+    }
+
+
+    #logout{
+        position: relative;
+        left: auto;
+        width: 100%;
+    }
+
+    .header{
+        margin-left: 50px;
+    }
+
+    .header img{
+        width: 25px;
+        height: 25px;
+    }
+
+    #userImg{
+        position: relative;
+        left: auto;
+    }
+    
+    .user{
+        height: fit-content;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        position: relative;
+        right: 2rem;
+        top: 5px;
+        left: auto;
+    }
+
+    .caixaPesquisa{
+        width: 180px;
+        padding: 3px 8px;
+        margin-right: 15px;
+        margin-left: 30px;
+        gap: auto;
+    }
+    
+    .caixaPesquisa input{
+        background: transparent;
+        padding: 10px;
+    }
+    
+    .caixaPesquisa i{
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: all 0.5s ease-out;
+    }
+    
+    .caixaPesquisa i:hover{
+        transform: scale(1.15);
+    }
+
+    .container{
+        right: 0;
+        margin-left: 50px;
+        width: auto;
+    }
+    
+    .container h2 {
+        color: rgb(0, 75, 160);
+        margin-bottom: 20px;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+}
+
+@media (orientation: landscape){
+    #logout{
+        bottom: 0;
+        left: auto;
+        width: 100%;
+    }
+
+    .mobileMenu li{
+        margin: 1px 1.5rem;
+    }
+
+    #logout{
+        position: relative;
+        left: auto;
+        width: 100%;
+    }
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BluePen</title>
+    <link rel="shortcut icon" href="../css/favicon/dashboard.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/main/mainadminstyle.css">
+    <link rel="stylesheet" href="../css/main/vizu_user.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<body>
+    <div id="sidebar">
+        <div id="logo">
+            <img src="" alt="">
+        </div>
+
+        <ul class="menu">
+            <li >
+                <a href="mainadmin.html">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li id="active">
+                <a href="#">
+                    <i class="fas fa-users"></i>
+                    <span>Visualizar Usuários</span>
+                </a>
+            </li>    
+            <li>
+                <a href="cad_user.html">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Cadastro de Usuários</span>
+                </a>
+            </li>
+            <li id="logout">
+                <a href="#" id="btnLogout">
+                    <i class="fas fa-sign-out"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+        </ul>
+
+        <div id="menuBarra">
+            <div class="barra1"></div>
+            <div class="barra2"></div>
+            <div class="barra3"></div>
+        </div>
+
+        <ul class="mobileMenu" onclick="mobileMenuShow(this)">
+            <li>
+                <a href="#">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="cad_user.html">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Cadastro de Usuários</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-users"></i>
+                    <span>Visualizar Usuários</span>
+                </a>
+            </li>
+            <li id="logout">
+                <a href="#" id="btnLogout">
+                    <i class="fas fa-sign-out"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="conteudo">
+        <div class="header">
+            <div id="header_titulo">
+                <span id="username"></span>
+                <h2>BluePen Dashboard</h2>
+            </div>
+            <div class="user">
+                <div class="caixaPesquisa">
+                    <i class="fa fa-search"></i>
+                    <input type="text" placeholder="Pesquisar">
+                </div>
+                <img src="../css/main/img/user.png" alt="user">
+            </div>
+        </div>
+    </div>
+    <section class="principal">
+        <div class="user-div-title">
+            <h1>Empresas cadastradas</h1>
+        </div>
+
+        <div class="user-grid">
+            <div class="user-grid-item">Nome</div>
+            <div class="user-grid-item">Email</div>
+            <div class="user-grid-item">Plano</div>
+            <div class="user-grid-item">Editar/Excluir</div>
+        </div>
+
+        <ul id="users" class="user-list"></ul>
+    </section>
+    <script type="module" src="../js/vizualizar_user.js"></script>
+    <script type="module" src="../js/logout.js"></script>
+    <script src="../js/mobile.js"></script>
+</body>
+</html>

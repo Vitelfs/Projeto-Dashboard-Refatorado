@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BluePen</title>
+    <link rel="shortcut icon" href="../css/favicon/dashboard.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/main/cad_client.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+</head>
+<body>
+    <header>
+        <div id="conteudo">
+            <div class="header">
+                <div id="header_titulo">
+                    <span id="username"></span>
+                    <h2>BluePen</h2>
+                </div>
+                <div class="user">
+                    <div class="caixaPesquisa">
+                        <i class="fa fa-search"></i>
+                        <input type="text" placeholder="Pesquisar">
+                    </div>
+                    <img src="../css/main/img/user.png" alt="user">
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="sidebar">
+        <div id="logo">
+            <img src="" alt="">
+        </div>
+
+        <ul class="menu">
+            <li>
+                <a href="./mainuser.html">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Perfil</span>
+                </a>
+            </li>
+            <li>
+                <a href="clientes.html">
+                    <i class="fas fa-users"></i>
+                    <span>Clientes</span>
+                </a>
+            </li>
+            <li id="active">
+                <a href="#" class="active">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Adicionar clientes</span>
+                </a>
+            </li>
+            
+            <li id="logout">
+                <a href="#" id="btnLogout">
+                    <i class="fas fa-sign-out"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+        </ul>
+
+        <div id="menuBarra" onclick="mobileMenuShow(this)">
+            <div class="barra1"></div>
+            <div class="barra2"></div>
+            <div class="barra3"></div>
+        </div>
+
+        <ul class="mobileMenu">
+            <li>
+                <a href="./mainuser.html">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Perfil</span>
+                </a>
+            </li>
+            <li>
+                <a href="clientes.html">
+                    <i class="fas fa-users"></i>
+                    <span>Clientes</span>
+                </a>
+            </li>
+            <li id="active">
+                <a href="#" class="active">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Adicionar clientes</span>
+                </a>
+            </li>
+            
+            <li id="logout">
+                <a href="#" id="btnLogout">
+                    <i class="fas fa-sign-out"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="Cliente">
+         <div class="cad_cliente">
+            <h1>Cadastro de Cliente</h1>
+            <div class="dados-cliente">
+                <div class="nome-client">
+                    <label for="nome-cliente">Nome</label>
+                    <input type="text" name="nome" placeholder="Nome completo" id="nome">
+                </div>
+                <div class="ramo">
+                    <label for="ramo/seguimento">Ramo/Seguimento</label>
+                    <input name="ramo/seguimento" type="text" placeholder="Nicho que trabalha" id="ramo">
+                </div>
+               
+                <div class="email-cliente">
+                    <label for="email-client">Email</label>
+                    <input name="email" type="email" placeholder="......@gmail.com" id="email">
+                </div>
+            </div>
+            <div class="dados-cliente">
+                <div class="Endereço">
+                    <label for="Endereço">Endereço</label>
+                    <input name="endereço" placeholder="Rua:" id="endereco">
+                </div>
+                <div class="CPF-cliente">
+                    <label for="CPF-cliente">CPF</label>
+                    <input id="cpf" name="" type="text" inputmode="numeric" placeholder="000.000.000-00">
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script> 
+                    <script type="text/javascript">
+                        $("#cpf").mask("000.000.000-00");
+                    </script>  
+                </div>
+                <div class="CNPJ-cliente">
+                    <label for="CPNPJ-client">CNPJ</label>
+                    <input id="cnpj" name="CNPJ" type="text" inputmode="numeric" placeholder="XX.XXX.XXX/0001-XX">
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script> 
+                    <script type="text/javascript">
+                        $("#cnpj").mask("00.000.000/0000-00");
+                    </script>  
+                </div>
+            </div>
+            <div class="dados-cliente">
+            <div class="Telefone-cliente">
+                <label for="Telefone">Telefone</label>
+                <input id="tel" name="telefone" type="text" inputmode="numeric" placeholder="(00) 00000-0000">
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script> 
+                <script type="text/javascript">
+                    $("#tel").mask("(00) 00000-0000");
+                </script>  
+            </div>
+            <div class="estado">
+                <label for="Estado">Estado</label>
+                <select name="tipo" id="select-estado"></select>
+            </div>
+            
+            <div class="button">
+            <button class="btn-cad-clin" id="btnCadastrar">Cadastrar cliente</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script type="module" src="../js/cadastrar_cliente.js"></script>
+    <script src="../js/estados.js"></script>
+    <script src="../js/mobile.js"></script>
+    <script type="module" src="../js/logout.js"></script>
+</body>
+</html>
